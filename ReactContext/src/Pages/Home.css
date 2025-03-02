@@ -1,0 +1,20 @@
+.home-container{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    height: 100%;
+    min-height: 100vh;
+    color: beige;
+
+}
+
+.left{
+    background-color:darkgrey;
+    width: 50%;
+}
+
+.right{
+    background-color: grey;
+    width: 50%;
+}
+
