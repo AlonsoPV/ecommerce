@@ -1,7 +1,7 @@
-/* import { useProductContext } from "../../Hook/useProductContext"; */
-import "./productList.css";
+import { useProductContext } from "../../Hook/useProductContext";
+import "./ArchivoProductos.css";
 
-const archivoProductos = () => {
+const ArchivoProductos = () => {
   const { list, loading, addToCart, search } = useProductContext();
 
   // 🔍 Filtrar productos según el término de búsqueda
@@ -28,5 +28,5 @@ const archivoProductos = () => {
   );
 };
 
-export default archivoProductos;
+export default ArchivoProductos;
  

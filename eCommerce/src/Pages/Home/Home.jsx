@@ -1,7 +1,6 @@
-import archivoProductos from "../Components/archivoProductos";
+import ArchivoProductos from "../../Components/ArchivoProductos";
 /* import ProductoIndividual from "../Components/ProductoIndividual"; */
-/* import { ProductProvider } from "../context/ProductContext";
- */
+import { ProductProvider } from "../../Context/ProductContext";
 /* import Header from "../Components/Header"; */
 import "./Home.css";
  
@@ -13,7 +12,7 @@ const Home = () => {
       <div className="home-container">
         <div className="left">
           <h2>🛍️ Productos</h2>
-          <archivoProductos />
+          <ArchivoProductos/>
         </div>
         <div className="right">
           <h2>📦 Detalle del Producto</h2>
