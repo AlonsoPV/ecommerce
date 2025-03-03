@@ -1,0 +1,15 @@
+.row-song {
+    border: 2px solid black;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #F9F9F9;
+    color: black;
+    cursor: pointer;
+    box-shadow: 0 19px 38px rgba(0, 0, 0,0.30);
+    border-radius: 6px;
+}
+
+.row-container{
+    overflow: scroll;
+    height: 80vh;
+}

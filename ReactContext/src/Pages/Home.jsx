@@ -1,23 +1,25 @@
-import SongList from '../Components/SongList';
-import SongDetail from '../Components/SongDetail';
-import './Home.css'
-import { SongProvider } from '../Context/SongContext';
-
+import SongList from "../Components/SongList"
+import SongDetail from "../Components/SongDetail"
+import { SongProvider } from "../Context/SongContext"
+import './home.css'
+import Header from "../Components/Header"
 
 const Home = () => {
   return (
-    <SongProvider >
-    <div class="home-container">
-      <div className="left">
+    <SongProvider>
+      <Header />
+    <div className='home-container'>
+      <div className='left'>
+        <p>Song List</p>
         <SongList />
       </div>
-      <div className="right">
+      <div className='right'>
+        <p>Song Detail</p>
         <SongDetail />
-      </div >
-    </div >
-    </SongProvider >
+      </div>
+    </div>
+  </SongProvider>
+  )
+}
 
-  );
-};
-
-export default Home;
+export default Home

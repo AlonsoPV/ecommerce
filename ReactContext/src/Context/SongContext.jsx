@@ -1,18 +1,18 @@
 import { createContext, useState, useEffect} from "react";
 import canciones from "../Utils/listaCanciones.json";
-import { Children } from "react";
+import {children} from "react";
 
 
 //1. Crear Contexto
-export const Context = createContext();
+const SongContext = createContext();
 
 //2. Crear Provider
 function SongProvider({children}) {
     const[list, setList] = useState([]); //lista de canciones
     const[loading, setLoading] = useState(true); //si esta cargando
     const[selectedSong, setSelectedSong] = useState({}); //contiene cancion seleccionada
-    const{search,setSearch} = useState(''); //identifica la palabra que pongo en el buscador
-    useEffect(() => {
+    const[search, setSearch] = useState(''); //identifica la palabra que pongo en el buscador
+    useEffect(() => { 
         setTimeout(() => {
             setList(canciones);
             setLoading(false);
@@ -21,8 +21,16 @@ function SongProvider({children}) {
        
     },[]);
 
+    //---------------
+    const filteredList = list.filter(song => 
+        song.title.toLowerCase().includes(search.toLowerCase()) ||
+        song.artist.toLowerCase().includes(search.toLowerCase())
+    );
+    //-----------
+
     const data = {
-        list,
+        list: filteredList,
+        //list,
         loading,
         selectedSong, 
         setSelectedSong,
@@ -36,7 +44,4 @@ function SongProvider({children}) {
     )
 }
 
-export{
-    SongContext,
-    SongProvider
-}
+export { SongContext, SongProvider };

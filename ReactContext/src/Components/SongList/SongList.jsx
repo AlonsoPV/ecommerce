@@ -1,38 +1,34 @@
-import { use } from "react";
-import { useSongContext } from "../../Hook/useSongContext";
+import { useSongContext } from "../../Hook/useSongContext"
+import './songList.css'
 
 const SongList = () => {
-  const { list, loading, setSelectedSong, search } = useSongContext();
+  const { list, loading, setSelectedSong, search } = useSongContext()
+
   const filteredSongList = list.filter((song) => {
-    return song.title.toLowerCase().includes(search.toLowerCase())
+    return song.title.toLowerCase()
   })
 
-
   return (
-    <section className="row-container">
+    <section className='row-container'>
       {
         loading
           ? <h2>Cargando...</h2>
           : filteredSongList.map((song) => (
             <article
-            key={song.id}
-            className="row-song"
-            onClick={() => {selectedSong(song)}}
-            >
-              <h3>
-                {song.title}
-              </h3>
-              <h3>
-                {song.artist}
-              </h3>
-
+              key={song.id}
+              className='row-song'
+              onClick={() => {
+                setSelectedSong(song)
+              }}
+              
+              >
+              <h3>{song.title}</h3>
+              <h3>{song.artist}</h3>
             </article>
-          )
-          
-        )
-        }
+          ))
+      }
     </section>
-  );
-};
+  )
+}
 
-export default SongList;
+export default SongList
