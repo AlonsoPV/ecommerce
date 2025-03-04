@@ -10,7 +10,7 @@ const ProductContext = createContext();
 function ProductProvider({children}) {
     const[list, setList] = useState([]); //lista de canciones
     const[loading, setLoading] = useState(true); //si esta cargando
-    const[selectedSong, setSelectedProduct] = useState({}); //contiene cancion seleccionada
+    const[selectedProduct, setSelectedProduct] = useState({}); //contiene cancion seleccionada
     const[search, setSearch] = useState(''); //identifica la palabra que pongo en el buscador
     useEffect(() => { 
         setTimeout(() => {
@@ -23,19 +23,19 @@ function ProductProvider({children}) {
 
     //---------------
     const filteredList = list.filter(producto => 
-        producto.title.toLowerCase().includes(search.toLowerCase()) ||
-        producto.artist.toLowerCase().includes(search.toLowerCase())
+        producto.product_name.toLowerCase().includes(search.toLowerCase()) 
     );
     //-----------
 
     const data = {
         list: filteredList,
-        //list,
+        //list, 
         loading,
         selectedProduct, 
         setSelectedProduct,
         search,
-        setSearch
+        setSearch,
+        
     }
     return(
         <ProductContext.Provider value={data}>

@@ -3,25 +3,21 @@ import ProductoIndividual from "../../Components/ProductoIndividual";
 import ReactHookForm from "../../Components/FormContacto";
 import { ProductProvider } from "../../Context/ProductContext";
 import Header from "../../Components/Header";
-import "./Home.css";
+import "./LogIn.css";
  
 const Home = () => {
   return (
   
      <ProductProvider>
-    
+     
       <div className="home-container">
-        <div className="left">
-          <h2>🛍️ Productos</h2>
-          {/* <Header/> */}
-          <ArchivoProductos/>
-        </div>
-        <div className="right">
-          <h2>📦 Detalle de Producto</h2>
-          <ProductoIndividual/>
+      
+        <ReactHookForm/>
+        {/* <div className="right">
+          <h2>Ingresa tu correo y contraseña:</h2>
           
-          
-        </div>
+
+        </div> */}
       </div>
     </ProductProvider>
      

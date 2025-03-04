@@ -18,10 +18,6 @@
     transition: transform 0.2s ease-in-out;
   }
   
-  .product-card:hover {
-    transform: translateY(-5px);
-  }
-  
   /* Nombre del producto */
   .product-card h3 {
     font-size: 1.2rem;

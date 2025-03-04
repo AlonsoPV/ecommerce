@@ -18,7 +18,7 @@ const SongList = () => {
               key={song.id}
               className='row-song'
               onClick={() => {
-                setSelectedSong(song)
+                setSelectedSong(song) 
               }}
               
               >
