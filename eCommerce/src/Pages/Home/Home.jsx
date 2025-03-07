@@ -6,24 +6,21 @@ import Header from "../../Components/Header";
 import "./Home.css";
  
 const Home = () => {
-  return (
-  
-     <ProductProvider>
-    
+  return (  
       <div className="home-container">
         <div className="left">
           <h2>🛍️ Productos</h2>
           {/* <Header/> */}
           <ArchivoProductos/>
         </div>
-        <div className="right">
+       {/*  <div className="right">
           <h2>📦 Detalle de Producto</h2>
           <ProductoIndividual/>
           
           
-        </div>
+        </div> */}
       </div>
-    </ProductProvider>
+   
      
   );
 };
