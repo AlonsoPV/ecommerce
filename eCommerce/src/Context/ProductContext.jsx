@@ -8,10 +8,11 @@ const ProductContext = createContext();
 
 //2. Crear Provider
 function ProductProvider({children}) {
-    const[list, setList] = useState([]); //lista de canciones
+    const[list, setList] = useState([]); //lista de productos
     const[loading, setLoading] = useState(true); //si esta cargando
-    const[selectedProduct, setSelectedProduct] = useState({}); //contiene cancion seleccionada
-    const[search, setSearch] = useState(''); //identifica la palabra que pongo en el buscador
+    const[selectedProduct, setSelectedProduct] = useState({}); //guarda el prodcuto seleccionado
+    const[search, setSearch] = useState(''); //barra de busqeuda
+    const[numProductos, setNumProductos] = useState(0);
     useEffect(() => { 
         setTimeout(() => {
             setList(productos);
@@ -21,6 +22,9 @@ function ProductProvider({children}) {
        
     },[]);
 
+    const anadirCarrito = () => {
+        setNumProductos(numProductos + 1); 
+    };
     //---------------
     const filteredList = list.filter(producto => 
         producto.product_name.toLowerCase().includes(search.toLowerCase()) 
@@ -35,6 +39,10 @@ function ProductProvider({children}) {
         setSelectedProduct,
         search,
         setSearch,
+        anadirCarrito,
+        setNumProductos,
+        numProductos
+        
         
     }
     return(
