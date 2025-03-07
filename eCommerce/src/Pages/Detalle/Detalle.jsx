@@ -8,7 +8,7 @@ import "./Detalle.css";
 const Home = () => {
   return (
   
-     <ProductProvider>
+    
 
       <div className="home-container">
         
@@ -18,7 +18,7 @@ const Home = () => {
 
         </div>
       </div>
-    </ProductProvider>
+ 
      
   );
 };
