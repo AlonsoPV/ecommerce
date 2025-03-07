@@ -9,7 +9,17 @@
     transition: transform 0.3s ease-in-out;
   }
   
-  
+  button {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
   .tarjeta_imagen {
     width: 40%;
     height: auto;
