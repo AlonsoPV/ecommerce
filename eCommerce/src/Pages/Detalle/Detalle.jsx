@@ -5,7 +5,7 @@ import { ProductProvider } from "../../Context/ProductContext";
 import Header from "../../Components/Header";
 import "./Detalle.css";
  
-const Home = () => {
+const Detalle = () => {
   return (
   
     
@@ -23,4 +23,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Detalle;
