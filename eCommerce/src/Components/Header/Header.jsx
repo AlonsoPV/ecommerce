@@ -14,8 +14,9 @@ const Header = () => {
 
       <div className="header__nav"> 
           <Link to="/" className="header__nav-item">Home</Link>
-          <Link to="/Detalle" className="header__nav-item">Detalle</Link>
-          <Link to="/LogIn" className="header__nav-item">LogIn</Link>
+       {/*    <Link to="/Detalle" className="header__nav-item">Detalle</Link> */}
+          <Link to="/LogIn" className="header__nav-item">Contacto</Link>
+          <Link to="/Auth/Login" className="header__nav-item">LogIn</Link>
           🛒:<b>{numProductos}</b>
           
         </div>

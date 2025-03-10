@@ -2,8 +2,10 @@ import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import  "./FormContacto.css"
 import * as yup from "yup" //reglas de validacion en los formularios
+import {useAuthContext} from "@/Hook/useAuthContext"
 
 const ReactHookForm = () => {
+
     const userFormSchema = yup
         .object({
             firstName: yup.string().required('Escribe tu nombre'),
