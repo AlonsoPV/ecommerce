@@ -12,7 +12,7 @@ const Header = () => {
     <div className="header__container">
       <div className="header__content">
 
-      <div className="header__nav">
+      <div className="header__nav"> 
           <Link to="/" className="header__nav-item">Home</Link>
           <Link to="/Detalle" className="header__nav-item">Detalle</Link>
           <Link to="/LogIn" className="header__nav-item">LogIn</Link>

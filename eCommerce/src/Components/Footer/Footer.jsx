@@ -1,4 +1,5 @@
 import './Footer.css'
+
 const Footer = () => {
     return (
       <footer className="footer">
@@ -7,9 +8,9 @@ const Footer = () => {
           Desarrollado por <a href="www.emotionsites.com" target="_blank">eMotion Sites</a>
         </p>
         <div className="footer__redes">
-          <a href="#" target="_blank">F</a>
-          <a href="#" target="_blank">I</a>
-          <a href="#" target="_blank">LIn</a>
+          <a className='redes' href="#" target="_blank">Facebook</a>
+          <a className='redes' href="#" target="_blank">Instagram</a>
+          <a className='redes' href="#" target="_blank">LinkedIn</a>
         </div>
       </footer>
     );
